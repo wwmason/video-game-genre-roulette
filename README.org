@@ -6,9 +6,9 @@ Simple: randomly generate a few video game genres!
 
 I wrote this (very) simple program to learn the absolute basics of Common Lisp (as realized in SBCL).  It generates a list of video game genres.  The user can specify how many to generate and whether or not to include sub-genres.
 
-You could reproduce this program in an hour (and that includes the time to find a reasonable list of video game genres).
+You could reproduce this program in an hour (and that includes the time to find a reasonable list of video game genres).  It took me longer than that because I don't know what I'm doing.
 
-An example of how to use this program is:
+An example of how to use this program:
 
 #+NAME: example
 #+BEGIN_SRC lisp
@@ -28,7 +28,7 @@ Available on GitHub (which is probably where you're reading this!): https://gith
 Just dump video-game-genre-roulette.lisp in a directory and have at it.
 
 *** Executing program
-I run it straight from Emacs + SLIME.  But if you were going to use it from a standalone SBCL prompt, you might do the following:
+I run it straight from Emacs + SLIME.  But you might do the following if you were going to use it from a standalone SBCL prompt:
 
 #+NAME: load
 #+BEGIN_SRC lisp
@@ -37,26 +37,24 @@ I run it straight from Emacs + SLIME.  But if you were going to use it from a st
 
 That will catch a bunch of errors because I am an uncultured swine regarding Lisp.  I'll (hopefully) fix those later.
 
-Then, you can use the following function to generate and print random genres:
+Then, you can use the following function to generate and print random genres (note that this is the function definition and not something to copy/paste directly):
 
 #+NAME: load
 #+BEGIN_SRC lisp
   (defun pretty-print-list (genres &optional (incl-sub-genres)))
 #+END_SRC
 
-An example would be:
+An example which would randomly select 3 video game genres, including sub-genres, and print them one-per-row would be:
 
-#+NAME: load
+#+NAME: run
 #+BEGIN_SRC lisp
   (pretty-print-list (roulette 3) t)
 #+END_SRC
 
-which would randomly select 3 video game genres, including sub-genres, and print them one-per-row to the REPL.
-
 
 ** Help
 
-It's pretty simple.  You probably know Common Lisp better than I do, so just take a peek at the code.
+The code's pretty simple.  You probably know Common Lisp better than I do, so just take a peek at the code.
 
 ** Authors
 
