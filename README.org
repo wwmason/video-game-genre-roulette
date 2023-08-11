@@ -30,23 +30,26 @@ Just dump video-game-genre-roulette.lisp in a directory and have at it.
 *** Executing program
 I run it straight from Emacs + SLIME.  But if you were going to use it from a standalone SBCL prompt, you might do the following:
 
-```
-(load "video-game-genre-roulette.lisp")
-```
+#+NAME: load
+#+BEGIN_SRC lisp
+  (load "video-game-genre-roulette.lisp")
+#+END_SRC
 
 That will catch a bunch of errors because I am an uncultured swine regarding Lisp.  I'll (hopefully) fix those later.
 
 Then, you can use the following function to generate and print random genres:
 
-```
-(defun pretty-print-list (genres &optional (incl-sub-genres)))
-```
+#+NAME: load
+#+BEGIN_SRC lisp
+  (defun pretty-print-list (genres &optional (incl-sub-genres)))
+#+END_SRC
 
 An example would be:
 
-```
-(pretty-print-list (roulette 3) t)
-```
+#+NAME: load
+#+BEGIN_SRC lisp
+  (pretty-print-list (roulette 3) t)
+#+END_SRC
 
 which would randomly select 3 video game genres, including sub-genres, and print them one-per-row to the REPL.
 
