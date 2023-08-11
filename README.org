@@ -78,17 +78,20 @@ I looked at the Steam Store page under categories for the list of genres and sub
 ** Possible Improvements
 (if the mood strikes me)
 
-*** Document Code Better
+*** Document Code
 It's currently not documented at all outside of this README.  I should probably just follow this guidance: https://lisp-lang.org/style-guide/#documentation
 
 *** Fix Warnings
 Right now it throws a bunch of warnings when you load it.  I should clean up the code to fix those.
 
-*** A Web Interface
-It might be interesting to just put this on the web so you don't need to download it and have a common lisp installation to use it.  Just go to a website, optionally specify number of picks and whether or not to include sub-genres, and hit the generate button.
+*** Web Interface
+It might be interesting to just put this on the web so you don't need to download it and have a common lisp installation to use it.  You could just go to a website, optionally specify number of picks and whether or not to include sub-genres, and hit the generate button.
 
 *** Initial Genre Compatibility Check
 Right now it just makes completely random draws.  But some of them might not make sense.  What is really meant by crossing a first-person shooter with a third-person shooter, for example?  So I could envision a toggle to do a sort of first-pass compatibility check.  But in reality the user can just generate a new set of genres.
 
 *** Other Parameter / Feature Generation
 Add a means to add other random parameters, features, or themes as a constraint.  Things like: "modify the environment" or "time limit" or "power-ups".  Things that aren't a genre or sub-genre themselves but may be interesting to try to incorporate into the mash-up.  This might just work better as a completely seperate program, though.
+
+** Musings
+I spent longer than I should have looking up video game genres and trying to find and/or synthesize some sort of list.  Ideally, it's nice to imagine the equivalent of some sort of minimal spanning set of genres (with sub-genres) that cover all videogames.  But in practice, the Steam Store has a zillion users and categorizes games into a particular set of genres and sub-genres, so I just mostly used them.
