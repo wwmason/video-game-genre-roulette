@@ -1,0 +1,9 @@
+# macOS detritus
+.DS_Store
+
+# Emacs detritus
+*~
+/#*
+
+# Common Lisp detritus
+*.fasl

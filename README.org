@@ -1,0 +1,93 @@
+* Video Game Genre Roulette
+
+Simple: randomly generate a few video game genres!
+
+** Description
+
+I wrote this (very) simple program to learn the absolute basics of Common Lisp (as realized in SBCL).  It generates a list of video game genres.  The user can specify how many to generate and whether or not to include sub-genres.
+
+You could reproduce this program in an hour (and that includes the time to find a reasonable list of video game genres).
+
+An example of how to use this program is:
+
+#+NAME: example
+#+BEGIN_SRC lisp
+  (pretty-print-list (roulette 3) t)
+#+END_SRC
+
+That will generate 3 random video game genres (including sub-genres) and print them one-per-row.
+
+** Getting Started
+
+*** Dependencies
+Minimal.  I developed this on macOS using SBCL version 2.3.4.  But it should be usable on any OS with an SBCL installation.  And it may even be usable with other Common Lisp dialects: to my knowledge I haven't used any SBCL-specific extensions.
+
+*** Installing
+Available on GitHub (which is probably where you're reading this!): https://github.com/wwmason/video-game-genre-roulette/settings
+
+Just dump video-game-genre-roulette.lisp in a directory and have at it.
+
+*** Executing program
+I run it straight from Emacs + SLIME.  But if you were going to use it from a standalone SBCL prompt, you might do the following:
+
+```
+(load "video-game-genre-roulette.lisp")
+```
+
+That will catch a bunch of errors because I am an uncultured swine regarding Lisp.  I'll (hopefully) fix those later.
+
+Then, you can use the following function to generate and print random genres:
+
+```
+(defun pretty-print-list (genres &optional (incl-sub-genres)))
+```
+
+An example would be:
+
+```
+(pretty-print-list (roulette 3) t)
+```
+
+which would randomly select 3 video game genres, including sub-genres, and print them one-per-row to the REPL.
+
+
+** Help
+
+It's pretty simple.  You probably know Common Lisp better than I do, so just take a peek at the code.
+
+** Authors
+
+https://github.com/wwmason
+
+** Version History
+
+*** 0.1
+    - Initial Release
+
+** License
+
+This project is licensed under The Unlicense (https://en.wikipedia.org/wiki/Unlicense).
+
+
+** Acknowledgments
+
+I looked at the Steam Store page under categories for the list of genres and sub-genres.  So thanks to Valve, I guess.
+
+
+** Possible Improvements
+(if the mood strikes me)
+
+*** Document Code Better
+It's currently not documented at all outside of this README.  I should probably just follow this guidance: https://lisp-lang.org/style-guide/#documentation
+
+*** Fix Warnings
+Right now it throws a bunch of warnings when you load it.  I should clean up the code to fix those.
+
+*** A Web Interface
+It might be interesting to just put this on the web so you don't need to download it and have a common lisp installation to use it.  Just go to a website, optionally specify number of picks and whether or not to include sub-genres, and hit the generate button.
+
+*** Initial Genre Compatibility Check
+Right now it just makes completely random draws.  But some of them might not make sense.  What is really meant by crossing a first-person shooter with a third-person shooter, for example?  So I could envision a toggle to do a sort of first-pass compatibility check.  But in reality the user can just generate a new set of genres.
+
+*** Other Parameter / Feature Generation
+Add a means to add other random parameters, features, or themes as a constraint.  Things like: "modify the environment" or "time limit" or "power-ups".  Things that aren't a genre or sub-genre themselves but may be interesting to try to incorporate into the mash-up.  This might just work better as a completely seperate program, though.
