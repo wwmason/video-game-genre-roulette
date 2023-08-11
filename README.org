@@ -23,7 +23,7 @@ That will generate 3 random video game genres (including sub-genres) and print t
 Minimal.  I developed this on macOS using SBCL version 2.3.4.  But it should be usable on any OS with an SBCL installation.  And it may even be usable with other Common Lisp dialects: to my knowledge I haven't used any SBCL-specific extensions.
 
 *** Installing
-Available on GitHub (which is probably where you're reading this!): https://github.com/wwmason/video-game-genre-roulette/settings
+Available on GitHub (which is probably where you're reading this!): https://github.com/wwmason/video-game-genre-roulette
 
 Just dump video-game-genre-roulette.lisp in a directory and have at it.
 
